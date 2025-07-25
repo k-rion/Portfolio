@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurt Portfolio | Home</title>
+    <link rel="icon" type="image/png" href="Image/K__1_-removebg-preview.png" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- =================== HEADER =================== -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="/portfolio-website/src/Image/K__1_-removebg-preview.png"
+              alt="Kurt Rion Logo"
+            />
+          </a>
+        </div>
+
+        <div
+          class="menu-icon"
+          id="menuIcon"
+          aria-label="Open navigation"
+          tabindex="0"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#about" id="aboutMeNavBtn"
+            ><i class="fa-solid fa-user-tie"></i> About Me</a
+          >
+          <a href="#projectSection" id="projectBtn"
+            ><i class="fa-solid fa-list-check"></i> Projects</a
+          >
+          <a href="#contactSection" id="contactBtn"
+            ><i class="fa-solid fa-envelope"></i> Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- =================== MAIN CONTENT =================== -->
+    <main>
+      <!-- ===== HERO SECTION ===== -->
+      <section class="hero" aria-label="Introduction">
+        <div class="hero-img">
+          <img
+            src="/portfolio-website/src/Image/My Pictures/tmp_059afeb4-b52e-4d07-acde-350f89c0c5e9.jpeg"
+            alt="Kurt Rion Portrait"
+          />
+        </div>
+
+        <div class="hero-texts">
+          <h1>Hello, Welcome!</h1>
+          <h2>I'm Kurt <em>Rion</em></h2>
+
+          <div class="aboutme-button">
+            <a href="#about" id="aboutMeHeroBtn"
+              >About me <i class="fa-solid fa-user-tie"></i
+            ></a>
+          </div>
+
+          <p>
+            I’m an IT graduate with hands-on experience in building 2D/3D games
+            and a growing focus on front-end web development. Explore my
+            portfolio to see how I turn ideas into immersive and engaging user
+            experiences.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT SECTION ===== -->
+      <section class="about-me" id="about">
+        <div class="aboutme-container">
+          <div class="leftside-img">
+            <img
+              src="/portfolio-website/src/Image/My Pictures/IMG_20250719_084430.jpg"
+              alt="Kurt About"
+            />
+            <div class="resume">
+              <a
+                href="Resume/Kurt Resume.pdf"
+                download="KurtResume.pdf"
+                class="downloadButton"
+              >
+                <i class="fa-solid fa-download"></i> Download My Resume
+              </a>
+            </div>
+          </div>
+
+          <div class="rightside-txt">
+            <p>
+              Hi! I'm an IT graduate from STI College San Jose Del Monte with a
+              background in Java, C#, and Python. I’ve built 2D and 3D games
+              using Unity and collaborated using GitHub, SourceTree, and Visual
+              Studio. I’m now focused on front-end web development learning
+              HTML, CSS, and JavaScript, while exploring UI/UX and responsive
+              design. I’m eager to grow, contribute, and create engaging digital
+              experiences.
+            </p>
+            <!-- Tabs -->
+            <div class="tabSection">
+              <p
+                class="tab-links active-link"
+                onclick="openTab(event, 'skills')"
+              >
+                <i class="fa-solid fa-brain"></i> Skills
+              </p>
+              <p class="tab-links" onclick="openTab(event, 'education')">
+                <i class="fa-solid fa-graduation-cap"></i> Education
+              </p>
+              <p class="tab-links" onclick="openTab(event, 'experience')">
+                <i class="fa-solid fa-gears"></i> Experience
+              </p>
+              <p class="tab-links" onclick="openTab(event, 'certificates')">
+                <i class="fa-solid fa-certificate"></i> Certificates
+              </p>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span><i class="fa-solid fa-laptop"></i> UI/UX</span
+                  ><br />Web/App Interface Design
+                </li>
+                <li>
+                  <span><i class="fa-solid fa-code"></i> Web Development</span
+                  ><br />HTML, CSS, JavaScript
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-gamepad"></i> Game Development</span
+                  ><br />Unity, Game Mechanics
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span><i class="fa-solid fa-user-graduate"></i> BS IT</span
+                  ><br />STI San Jose Del Monte - Cum Laude
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-briefcase"></i> Game Developer
+                    Intern</span
+                  ><br />Lamina Studios, USA
+                  <p>
+                    Developed gameplay mechanics, UI elements, and game levels
+                    in Unity using C#. Collaborated cross-functionally to
+                    enhance user experience and polish game assets.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="certificates">
+              <ul class="certificate-list">
+                <!-- Certificates for Lamina -->
+                <li>
+                  <span
+                    ><i class="fa-solid fa-award"></i> Certificate of Completion
+                    – Lamina Studios, LCC</span
+                  >
+                  <br />
+                  486-hour Internship Completion (February 17 – May 9, 2025)<br />
+                  Given: May 12, 2025 <br />
+                  <p
+                    class="view-link"
+                    onclick="toggleImage(this)"
+                    data-target="img1"
+                  >
+                    View Certificate
+                  </p>
+                  <img
+                    id="img1"
+                    class="certificate-img"
+                    src="/portfolio-website/src/Image/Certificates/Certificate of Completion (Lamina Studios).png"
+                    alt="Certificate Preview"
+                  />
+                </li>
+                <!-- Research Symposium -->
+                <li>
+                  <span
+                    ><i class="fa-solid fa-award"></i> Research Symposium
+                    Presenter</span
+                  ><br />Hello World: A 2D Cross Platform Java and C#
+                  Programming Game<br />
+                  STI College San Jose Del Monte<br />
+                  Presented: December 2024 <br />
+                  <p
+                    class="view-link"
+                    onclick="toggleImage(this)"
+                    data-target="img2"
+                  >
+                    View Certificate
+                  </p>
+                  <img
+                    id="img2"
+                    class="certificate-img"
+                    src="/portfolio-website/src/Image/Certificates/Symposium Presenter Certificate.jpeg"
+                    alt="Certificate Preview"
+                  />
+                </li>
+                <!-- SAP Business One  -->
+                <li>
+                  <span><i class="fa-solid fa-award"></i> SAP Business One</span
+                  ><br />
+                  Systems Integration & Architecture Training Course<br />
+                  Completed: March 2023 <br />
+                  <p
+                    class="view-link"
+                    onclick="toggleImage(this)"
+                    data-target="img3"
+                  >
+                    View Certificate
+                  </p>
+                  <img
+                    id="img3"
+                    class="certificate-img"
+                    src="/portfolio-website/src/Image/Certificates/SAP Certificate.jpeg"
+                    alt="Certificate Preview"
+                  />
+                </li>
+                <!-- Java Oracle -->
+                <li>
+                  <span><i class="fa-solid fa-award"></i>Completion Award</span
+                  ><br />Oracle Academy<br />
+                  Completed: June 25, 2022 <br />
+                  <p
+                    class="view-link"
+                    onclick="toggleImage(this)"
+                    data-target="img4"
+                  >
+                    View Certificate
+                  </p>
+                  <img
+                    id="img4"
+                    class="certificate-img"
+                    src="/portfolio-website/src/Image/Certificates/Java Certificate (June 25, 2022).png"
+                    alt="Certificate Preview"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br />
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section class="Contact" id="contactSection">
+        <h1 class="first-title">Contact Me</h1>
+        <p class="contact-p">
+          My phone number and Gmail are listed below. Feel free to send me a
+          message using the form as well. Hope you're having a great day ahead!
+        </p>
+        <div class="center-wrapper">
+          <div class="contact-info">
+            <div class="row">
+              <span class="label">Contact</span><span class="divider">|</span>
+              <i class="fa-solid fa-phone"></i>
+              <span class="value">+63 981 799 3839</span>
+            </div>
+            <div class="row">
+              <span class="label">Gmail</span><span class="divider">|</span>
+              <i class="fa-solid fa-inbox"></i>
+              <span class="value">aquino.rionkurt@gmail.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-container">
+          <form
+            class="form-group"
+            action="https://formsubmit.co/aquino.rionkurt@gmail.com"
+            method="POST"
+          >
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your Name"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your Email"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
+            <div class="form-submitfield">
+              <input type="submit" id="submit" value="Send" />
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <br />
+
+      <!-- ===== PROJECT SECTION ===== -->
+      <section class="Project" id="projectSection">
+        <h1 class="first-title-project">Projects</h1>
+
+        <!-- Game Projects -->
+        <h2 class="project-section-title">Game Projects</h2>
+        <div class="projects-flex">
+          <!-- Project Card 1 -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="video-container">
+                <iframe
+                  class="video"
+                  src="https://drive.google.com/file/d/151lph_ZsbBtpmYkOdu5aeguLlSme9gC4/preview"
+                  frameborder="0"
+                  title="Game Video"
+                  allowfullscreen
+                  allow="autoplay"
+                ></iframe>
+              </div>
+              <h3 class="Title1">Hello World</h3>
+              <h4 class="Title2">
+                A 2D Programming Educational Game <br />
+                <em>Finished</em> (not published)
+              </h4>
+              <p>
+                A 2D Programming Education Game designed to help students learn
+                the fundamentals of programming in a fun and engaging way. The
+                game introduces core programming concepts such as variables,
+                loops, and functions through interactive gameplay and
+                progressively challenging levels.
+              </p>
+              <div class="project-tags">
+                <span
+                  ><div class="unity">
+                    <i class="fa-brands fa-unity"></i> Unity
+                  </div>
+                </span>
+                <span><div class="csharp">C#</div></span>
+              </div>
+
+              <div class="project-gallery">
+                <img
+                  src="/portfolio-website/src/Image/Project1_Symposium/Symposium.jpg"
+                  alt="Symposium Image"
+                  onclick="openProject(this)"
+                />
+                <img
+                  src="/portfolio-website/src/Image/Project1_Symposium/Symposium2.jpg"
+                  alt="Symposium Image"
+                  onclick="openProject(this)"
+                />
+                <img
+                  src="/portfolio-website/src/Image/Project1_Symposium/Symposium3.jpg"
+                  alt="Symposium Image"
+                  onclick="openProject(this)"
+                />
+                <img
+                  src="/portfolio-website/src/Image/Project1_Symposium/Symposium4.jpg"
+                  alt="Symposium Image"
+                  onclick="openProject(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="video-container">
+                <iframe
+                  class="video"
+                  src="https://drive.google.com/file/d/18msHetVkxsTmC-46FfNm3KWRZS0kW5JK/preview"
+                  frameborder="0"
+                  title="Game Video"
+                  allowfullscreen
+                  allow="autoplay"
+                ></iframe>
+              </div>
+              <h3 class="Title1">Steal And Stealth</h3>
+              <h4 class="Title2">
+                "In Shadows We Fight, In Silence We Survive"
+              </h4>
+              <p>
+                "Stealth and Steal" is a top-down 2D stealth-action puzzle game
+                developed using Unity during a 486-hour internship at Lamina
+                Studios, LLC. Set in feudal Japan, players take on the role of a
+                loyal ninja under a noble Daimyo's command.
+              </p>
+              <div class="project-tags">
+                <span
+                  ><div class="unity">
+                    <i class="fa-brands fa-unity"></i> Unity
+                  </div>
+                </span>
+                <span><div class="csharp">C#</div></span>
+              </div>
+
+              <div class="project-gallery">
+                <img
+                  src="/portfolio-website/src/Image/Project2_StealAndStealth/1.png"
+                  alt="Steal and Stealth Image"
+                  onclick="openProject(this)"
+                />
+                <img
+                  src="/portfolio-website/src/Image/Project2_StealAndStealth/2.png"
+                  alt="Steal and Stealth Image"
+                  onclick="openProject(this)"
+                />
+                <img
+                  src="/portfolio-website/src/Image/Project2_StealAndStealth/3.png"
+                  alt="Steal and Stealth Image"
+                  onclick="openProject(this)"
+                />
+                <img
+                  src="/portfolio-website/src/Image/Project2_StealAndStealth/Saturday GameDev Designing Level 2.png"
+                  alt="Steal and Stealth Image"
+                  onclick="openProject(this)"
+                />
+                <img
+                  src="/portfolio-website/src/Image/Project2_StealAndStealth/Thursday Game Dev.png"
+                  alt="Steal and Stealth Image"
+                  onclick="openProject(this)"
+                />
+                <img
+                  src="/portfolio-website/src/Image/Project2_StealAndStealth/Tuesday GameDev 4.png"
+                  alt="Steal and Stealth Image"
+                  onclick="openProject(this)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="imageOverlay">
+          <img id="overlayImage" src="" alt="Full View" />
+          <button id="closeButton" onclick="closedProject()">❌</button>
+        </div>
+
+        <!-- Web Projects -->
+        <h2 class="project-section-title2">Web Projects</h2>
+        <div class="projects-flex">
+          <!-- Project Card 3 -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="video-container">
+                <iframe
+                  class="video"
+                  src="https://drive.google.com/file/d/1Td_khBD7dpBOrlnbiqsK9CfHZFCzMWpl/preview"
+                  frameborder="0"
+                  title="Web Project Highlights"
+                  allowfullscreen
+                  allow="autoplay"
+                ></iframe>
+              </div>
+              <h3 class="Title1">To do List Web App</h3>
+              <h4 class="Title2">
+                My First Web Project<br />
+                <em>Finished</em>
+              </h4>
+              <p>
+                A simple and responsive task management application that allows
+                users to add, complete, and delete tasks. Built using HTML, CSS,
+                and JavaScript, this project helped me strengthen my web design
+                skills and serves as a foundation for learning React.
+              </p>
+              <div class="project-tags">
+                <span>
+                  <div class="html">
+                    <i class="fa-brands fa-html5"></i> HTML
+                  </div></span
+                >
+                <span
+                  ><div class="css">
+                    <i class="fa-brands fa-css3-alt"></i> CSS
+                  </div></span
+                >
+                <span
+                  ><div class="js">
+                    <i class="fa-brands fa-js"></i> JavaScript
+                  </div></span
+                >
+                <span
+                  ><div class="react">
+                    <i class="fa-brands fa-react"></i> React
+                  </div></span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 4 -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="video-container">
+                <iframe
+                  class="video"
+                  src="https://drive.google.com/file/d/11uW6gopWiLN6ljAP32AKS2Kif8_x-qz7/preview"
+                  frameborder="0"
+                  title="Web Project Highlights"
+                  allowfullscreen
+                  allow="autoplay"
+                ></iframe>
+              </div>
+              <h3 class="Title1">Color Picker Tool</h3>
+              <h4 class="Title2">
+                <em>Finished</em>
+              </h4>
+              <p>
+                A lightweight and interactive web tool that allows users to
+                select and copy color values in HEX format. This project was
+                built using HTML, CSS, and JavaScript, and it helped me explore
+                DOM manipulation and user interface design.
+              </p>
+              <div class="project-tags">
+                <span>
+                  <div class="html">
+                    <i class="fa-brands fa-html5"></i> HTML
+                  </div></span
+                >
+                <span
+                  ><div class="css">
+                    <i class="fa-brands fa-css3-alt"></i> CSS
+                  </div></span
+                >
+                <span
+                  ><div class="js">
+                    <i class="fa-brands fa-js"></i> JavaScript
+                  </div></span
+                >
+                <span
+                  ><div class="react">
+                    <i class="fa-brands fa-react"></i> React
+                  </div></span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 5 -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="video-container">
+                <iframe
+                  class="video"
+                  src="https://drive.google.com/file/d/1H5JbEZrPGc2lo4ItiN7HvTPFF6NlhMM_/preview"
+                  frameborder="0"
+                  title="Web Project Highlights"
+                  allowfullscreen
+                  allow="autoplay"
+                ></iframe>
+              </div>
+              <h3 class="Title1">ClicknCart (Online Shopping Web)</h3>
+              <h4 class="Title2-ol-shopping">
+                <em>In Progress</em>
+              </h4>
+              <p>
+                An ongoing web development project inspired by platforms like
+                Amazon, Shopee, and SHEIN. This e-commerce website is being
+                built using React, CSS, and modern web technologies. It aims to
+                feature product listings, dynamic routing, responsive layouts,
+                and user-friendly interfaces.
+              </p>
+              <div class="project-tags">
+                <span>
+                  <div class="html">
+                    <i class="fa-brands fa-html5"></i> HTML
+                  </div></span
+                >
+                <span
+                  ><div class="css">
+                    <i class="fa-brands fa-css3-alt"></i> CSS
+                  </div></span
+                >
+                <span
+                  ><div class="js">
+                    <i class="fa-brands fa-js"></i> JavaScript
+                  </div></span
+                >
+                <span
+                  ><div class="react">
+                    <i class="fa-brands fa-react"></i> React
+                  </div></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- General Languages & Tools -->
+        <div class="language-container">
+          <h2 class="second-title">General Languages & Tools</h2>
+          <div class="language-icons">
+            <div class="java">
+              <i class="fa-brands fa-java"></i>
+              <p class="desc">Java</p>
+            </div>
+            <div class="csharp">
+              C#
+              <p class="desc">C Sharp</p>
+            </div>
+            <div class="html">
+              <i class="fa-brands fa-html5"></i>
+              <p class="desc">HTML</p>
+            </div>
+            <div class="js">
+              <i class="fa-brands fa-js"></i>
+              <p class="desc">JavaScript</p>
+            </div>
+            <div class="css">
+              <i class="fa-brands fa-css3-alt"></i>
+              <p class="desc">CSS</p>
+            </div>
+            <div class="react">
+              <i class="fa-brands fa-react"></i>
+              <p class="desc">React</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a
+        href="https://www.instagram.com/queue_queueee/"
+        target="_blank"
+        class="instagram"
+        rel="noopener"
+        aria-label="Instagram"
+      >
+        <i class="fa-brands fa-square-instagram" aria-hidden="true"></i>
+      </a>
+
+      <a
+        href="https://www.facebook.com/kurtrion.aquino"
+        target="_blank"
+        class="facebook"
+        rel="noopener"
+        aria-label="Facebook"
+      >
+        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+      </a>
+
+      <a
+        href="https://github.com/KurtRion03"
+        target="_blank"
+        class="github"
+        rel="noopener"
+        aria-label="GitHub"
+      >
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+      </a>
+
+      <a
+        href=""
+        target="_blank"
+        class="linkedin"
+        rel="noopener"
+        aria-label="LinkedIn"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+    </div>
+
+    <!-- =================== FOOTER =================== -->
+    <footer>
+      <p>&copy; Kurt Portfolio 2025</p>
+    </footer>
+
+    <!-- =================== SCRIPTS =================== -->
+    <script src="main.js"></script>
+  </body>
+</html>
