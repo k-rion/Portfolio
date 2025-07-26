@@ -197,7 +197,7 @@ nav {
   background: #181a20;
   color: #f3f3f3;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
-  padding: 3rem 2rem;
+  padding: 12rem 2rem;
   height: auto;
 }
 .aboutme-container {
@@ -322,7 +322,7 @@ nav {
   background: #181a20;
   color: #f3f3f3;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
-  padding: 3rem 2rem;
+  padding: 6rem 2rem;
 }
 .first-title {
   font-size: 2rem;
