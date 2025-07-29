@@ -111,8 +111,6 @@ nav {
   transform: translateX(-50px);
   animation: heroImageFadeIn 1s forwards 0.5s;
 }
-.hero-img img:hover {
-}
 .hero-texts {
   max-width: 500px;
   opacity: 0;
