@@ -39,10 +39,10 @@ export default {
         fadeLeft: "fadeLeft 0.8s ease-in-out forwards",
         fadeRight: "fadeRight 0.8s ease-in-out forwards",
       },
+      colors: {
+        primary: "#00bcd4", // Choose your primary color
+      },
     },
   },
   plugins: [daisyui],
-  daisyui: {
-    themes: ["forest"],
-  },
 };

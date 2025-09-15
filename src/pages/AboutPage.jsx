@@ -3,26 +3,26 @@ import AboutMePic from "../assets/My Photo/MyPic.jpeg";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen w-[90%] mx-auto max-w-7xl py-16">
+    <div className="min-h-screen py-16 mx-auto max-w-7xl">
       {/* Title */}
-      <h2 className="inline-block mb-8 text-4xl font-bold border-b-4 border-blue-500 ml-32">
-        About Me
+      <h2 className="title-text">
+        About <span className="text-primary">Me</span>
       </h2>
 
-      <div className="flex flex-col items-center justify-between gap-12 text-white md:flex-row">
+      <div className="flex flex-col items-center justify-between gap-6 text-white md:flex-row">
         {/* Left Image */}
-        <div className="md:w-1/2 flex justify-center">
-          <div className="overflow-hidden rounded-2xl shadow-xl max-w-sm">
+        <div className="flex justify-start md:w-1/2">
+          <div className="max-w-sm overflow-hidden shadow-xl rounded-2xl">
             <img
               src={AboutMePic}
               alt="About Me"
-              className="object-cover w-full h-auto transition-transform duration-300 ease-in-out hover:scale-105"
+              className="object-cover w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110"
             />
           </div>
         </div>
 
         {/* Right Content */}
-        <div className="md:w-1/2 space-y-6 text-center md:text-left">
+        <div className="space-y-6 text-end md:w-1/2 md:text-left">
           {/* Description */}
           <p>
             Hello! I'm <span className="font-bold">Kurt Rion</span>, a
@@ -44,7 +44,7 @@ export default function AboutPage() {
                 <span>90%</span>
               </div>
               <progress
-                className="progress progress-primary w-full h-2"
+                className="w-full h-2 progress progress-primary"
                 value="90"
                 max="100"
               ></progress>
@@ -56,7 +56,7 @@ export default function AboutPage() {
                 <span>85%</span>
               </div>
               <progress
-                className="progress progress-primary w-full h-2"
+                className="w-full h-2 progress progress-primary"
                 value="85"
                 max="100"
               ></progress>
@@ -68,7 +68,7 @@ export default function AboutPage() {
                 <span>88%</span>
               </div>
               <progress
-                className="progress progress-primary w-full h-2"
+                className="w-full h-2 progress progress-primary"
                 value="88"
                 max="100"
               ></progress>

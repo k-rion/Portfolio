@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { projects } from "../data/projectData";
 
 export default function ProjectCards() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All Projects");
 
   const filteredProjects =
-    selectedCategory === "All"
+    selectedCategory === "All Projects"
       ? projects
       : projects.filter((project) => project.category === selectedCategory);
 
@@ -22,36 +22,40 @@ export default function ProjectCards() {
   return (
     <>
       {/* Buttons */}
-      <div className="flex flex-wrap gap-2 mb-6">
-        {["All", "Web Applications", "Game Development"].map((category) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`btn ${
-              selectedCategory === category ? "btn-primary" : "btn-outline"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
+        {["All Projects", "Web Development", "Game Development"].map(
+          (category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`btn ${
+                selectedCategory === category
+                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg"
+                  : "border border-blue-400 text-blue-400 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-400 hover:text-white"
+              }`}
+            >
+              {category}
+            </button>
+          )
+        )}
       </div>
 
       {/* Project Cards */}
-      <div className="flex flex-wrap justify-center gap-12 mt-10">
+      <div className="flex flex-wrap justify-center gap-8 mt-10">
         {filteredProjects.map((project) => {
           const grouped = groupTags(project.tags);
 
           return (
             <div
               key={project.id}
-              className="overflow-hidden transition-all duration-300 ease-in-out shadow-md card bg-base-100 w-80 rounded-2xl hover:shadow-xl hover:scale-105"
+              className="overflow-hidden ease-in-out card bg-base-100 w-96 group max-w-sm text-white rounded-2xl shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] transition duration-300"
             >
               {/* Image */}
               <figure>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-48"
+                  className="object-cover w-full h-48 transition-transform duration-300 ease-in-out group-hover:scale-110"
                 />
               </figure>
 
@@ -60,7 +64,7 @@ export default function ProjectCards() {
                 <h2 className="mb-2 text-lg font-semibold card-title">
                   {project.title}
                 </h2>
-                <p className="text-sm text-gray-600">{project.description}</p>
+                <p className="text-sm text-gray-400">{project.description}</p>
 
                 {/* Grouped Tags */}
                 <div className="mt-4 space-y-3">

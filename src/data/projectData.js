@@ -71,7 +71,7 @@ export const projects = [
       { name: "Tailwind", svg: Tailwind, type: "Framework" },
       { name: "VS Code", svg: VSCode, type: "Tool" },
     ],
-    category: "Web Applications",
+    category: "Web Development",
     link: "https://k-rion.github.io/Weather-Forecast-App/",
   },
   {
@@ -86,7 +86,7 @@ export const projects = [
       { name: "Tailwind", svg: Tailwind, type: "Framework" },
       { name: "VS Code", svg: VSCode, type: "Tool" },
     ],
-    category: "Web Applications",
+    category: "Web Development",
     link: "https://k-rion.github.io/TodoList/",
   },
   {
@@ -100,7 +100,7 @@ export const projects = [
       { name: "CSS", svg: CSS, type: "Language" },
       { name: "VS Code", svg: VSCode, type: "Tool" },
     ],
-    category: "Web Applications",
+    category: "Web Development",
     link: "https://k-rion.github.io/ClickNcart/",
   },
   {
@@ -115,7 +115,7 @@ export const projects = [
       { name: "Tailwind", svg: Tailwind, type: "Framework" },
       { name: "VS Code", svg: VSCode, type: "Tool" },
     ],
-    category: "Web Applications",
+    category: "Web Development",
     link: "https://k-rion.github.io/Movie-List/",
   },
 ];

@@ -6,7 +6,7 @@ import MyPhoto from "../../src/assets/My Photo/1000115656.jpg";
 export default function HomePage() {
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen mx-auto w-[90%] text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen mx-auto text-center max-w-7xl ">
       {/* Avatar */}
       <div className="mb-4 avatar">
         <div className="w-40 h-40 rounded-full ring ring-offset-base-100 ring-offset-2 animate-[bounce_4s_infinite] overflow-hidden">
