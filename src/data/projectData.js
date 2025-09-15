@@ -3,6 +3,8 @@ import HW from "../assets/Project1_Symposium/Hello_World.png";
 import SAS from "../assets/Project2_StealAndStealth/Screenshot_2025-06-25_073038.png.png";
 import WFP from "../assets/WeatherForecastApp/2.png";
 import TDA from "../assets/Todo_App/Screenshot 2025-09-01 102701.png";
+import CNC from "../assets/ClickNcartProject/clickncart1.png";
+import SMX from "../assets/MovieList/M1.png";
 
 // Imported SVG (Languages Category)
 import CSS from "../assets/SVG ICONS/css3-original.svg";
@@ -21,7 +23,6 @@ import VSCode from "../assets/SVG ICONS/vscode-original.svg";
 import ReactIcon from "../assets/SVG ICONS/react-original.svg";
 import VStudio from "../assets/SVG ICONS/visualstudio-original.svg";
 import SourceTree from "../assets/SVG ICONS/sourcetree-original.svg";
-
 
 export const projects = [
   {
@@ -93,13 +94,28 @@ export const projects = [
     title: "ClickNcart",
     description:
       "ClickNcart is an e-commerce website design built with HTML and CSS. It focuses on enhancing front-end design skills, while functionality is not yet implemented.",
-    image: TDA,
+    image: CNC,
     tags: [
       { name: "HTML", svg: HTML, type: "Language" },
       { name: "CSS", svg: CSS, type: "Language" },
       { name: "VS Code", svg: VSCode, type: "Tool" },
     ],
     category: "Web Applications",
-    link: "https://k-rion.github.io/TodoList/",
+    link: "https://k-rion.github.io/ClickNcart/",
+  },
+  {
+    id: 6,
+    title: "StreamX",
+    description:
+      "StreamX is a movie listing application powered by a REST API, featuring real-time fetching of the latest releases, advanced search, genre filtering, and year-based browsing.",
+    image: SMX,
+    tags: [
+      { name: "React", svg: ReactIcon, type: "Language" },
+      { name: "Javascript", svg: Javascript, type: "Language" },
+      { name: "Tailwind", svg: Tailwind, type: "Framework" },
+      { name: "VS Code", svg: VSCode, type: "Tool" },
+    ],
+    category: "Web Applications",
+    link: "https://k-rion.github.io/Movie-List/",
   },
 ];

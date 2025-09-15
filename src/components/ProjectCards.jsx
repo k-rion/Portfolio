@@ -44,29 +44,29 @@ export default function ProjectCards() {
           return (
             <div
               key={project.id}
-              className="card bg-base-100 w-80 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out overflow-hidden"
+              className="overflow-hidden transition-all duration-300 ease-in-out shadow-md card bg-base-100 w-80 rounded-2xl hover:shadow-xl hover:scale-105"
             >
               {/* Image */}
               <figure>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-48 w-full object-cover"
+                  className="object-cover w-full h-48"
                 />
               </figure>
 
               {/* Body */}
-              <div className="card-body p-5 flex flex-col">
-                <h2 className="card-title text-lg font-semibold mb-2">
+              <div className="flex flex-col p-5 card-body">
+                <h2 className="mb-2 text-lg font-semibold card-title">
                   {project.title}
                 </h2>
-                <p className="text-gray-600 text-sm">{project.description}</p>
+                <p className="text-sm text-gray-600">{project.description}</p>
 
                 {/* Grouped Tags */}
                 <div className="mt-4 space-y-3">
                   {Object.keys(grouped).map((type) => (
                     <div key={type}>
-                      <p className="text-xs font-semibold text-gray-500 mb-1">
+                      <p className="mb-1 text-xs font-semibold text-gray-500">
                         {type}
                       </p>
                       <div className="flex flex-wrap gap-2">
@@ -80,7 +80,7 @@ export default function ProjectCards() {
                               <img
                                 src={tag.svg}
                                 alt={tag.name}
-                                className="w-5 h-5 object-contain"
+                                className="object-contain w-5 h-5"
                               />
                             )}
 
@@ -101,7 +101,7 @@ export default function ProjectCards() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary rounded-lg mt-5"
+                  className="mt-5 rounded-lg btn btn-primary"
                 >
                   View Project
                 </a>
