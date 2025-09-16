@@ -20,15 +20,15 @@ export default function ProjectCards() {
   };
 
   return (
-    <>
-      {/* Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mb-6">
+    <section className="px-6 py-16 mx-auto max-w-7xl">
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-3 mb-12">
         {["All Projects", "Web Development", "Game Development"].map(
           (category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`btn ${
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
                 selectedCategory === category
                   ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg"
                   : "border border-blue-400 text-blue-400 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-400 hover:text-white"
@@ -41,56 +41,55 @@ export default function ProjectCards() {
       </div>
 
       {/* Project Cards */}
-      <div className="flex flex-wrap justify-center gap-8 mt-10">
+      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map((project) => {
           const grouped = groupTags(project.tags);
 
           return (
             <div
               key={project.id}
-              className="overflow-hidden ease-in-out card bg-base-100 w-96 group max-w-sm text-white rounded-2xl shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.6)] transition duration-300"
+              className="flex flex-col overflow-hidden bg-[#1a1a27] rounded-2xl shadow-lg transition duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]"
             >
               {/* Image */}
-              <figure>
+              <figure className="overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-48 transition-transform duration-300 ease-in-out group-hover:scale-110"
+                  className="object-cover w-full transition-transform duration-300 ease-in-out h-52 hover:scale-110"
                 />
               </figure>
 
               {/* Body */}
-              <div className="flex flex-col p-5 card-body">
-                <h2 className="mb-2 text-lg font-semibold card-title">
+              <div className="flex flex-col flex-1 p-6">
+                <h2 className="mb-3 text-xl font-semibold text-white">
                   {project.title}
                 </h2>
-                <p className="text-sm text-gray-400">{project.description}</p>
+                <p className="flex-1 text-sm text-gray-400">
+                  {project.description}
+                </p>
 
                 {/* Grouped Tags */}
-                <div className="mt-4 space-y-3">
+                <div className="mt-5 space-y-3">
                   {Object.keys(grouped).map((type) => (
                     <div key={type}>
-                      <p className="mb-1 text-xs font-semibold text-gray-500">
+                      <p className="mb-1 text-xs font-semibold tracking-wide text-gray-500 uppercase">
                         {type}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {grouped[type].map((tag, index) => (
                           <div
                             key={index}
-                            className="flex items-center gap-2 bg-gray-800 text-gray-200 px-3 py-1.5 rounded-lg text-sm font-medium"
+                            className="flex items-center gap-2 bg-[#2a2a3d] text-gray-200 px-3 py-1.5 rounded-lg text-xs font-medium shadow"
                           >
-                            {/* If SVG class is provided */}
                             {tag.svg && (
                               <img
                                 src={tag.svg}
                                 alt={tag.name}
-                                className="object-contain w-5 h-5"
+                                className="object-contain w-4 h-4"
                               />
                             )}
-
-                            {/* If Icon class is provided */}
                             {tag.icon && (
-                              <i className={`${tag.icon} text-xl`}></i>
+                              <i className={`${tag.icon} text-base`}></i>
                             )}
                             <span>{tag.name}</span>
                           </div>
@@ -105,7 +104,7 @@ export default function ProjectCards() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 rounded-lg btn btn-primary"
+                  className="inline-block px-5 py-2 mt-6 text-sm font-medium text-center text-white transition rounded-lg shadow bg-gradient-to-r from-blue-600 to-cyan-500 hover:opacity-90"
                 >
                   View Project
                 </a>
@@ -114,6 +113,6 @@ export default function ProjectCards() {
           );
         })}
       </div>
-    </>
+    </section>
   );
 }

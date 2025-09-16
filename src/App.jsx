@@ -3,7 +3,8 @@ import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import AboutPage from "./pages/AboutPage";
 import ProjectPage from "./pages/ProjectPage";
-import TechStacks from "./pages/TechStacks";
+import Skills from "./pages/Skills";
+import EducationPage from "./pages/EducationPage";
 import FooterComponent from "./components/FooterComponent";
 
 function App() {
@@ -22,14 +23,23 @@ function App() {
       <section id="aboutme">
         {/* ABout Me */}
         <AboutPage />
-        <TechStacks/>
+      </section>
+
+      <section id="education">
+        {/* Education and Tools */}
+        <EducationPage />
+      </section>
+
+      {/* Skills */}
+      <section id="skills">
+        <Skills />
       </section>
 
       <section id="projects">
         <ProjectPage />
       </section>
 
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   );
 }
