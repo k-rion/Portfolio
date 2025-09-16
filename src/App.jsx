@@ -20,13 +20,13 @@ function App() {
         <HomePage />
       </section>
 
-      <section id="aboutme">
+      <section id="about">
         {/* ABout Me */}
         <AboutPage />
       </section>
 
       <section id="education">
-        {/* Education and Tools */}
+        {/* Education */}
         <EducationPage />
       </section>
 

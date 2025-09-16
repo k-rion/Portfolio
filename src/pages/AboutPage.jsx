@@ -43,7 +43,7 @@ export default function AboutPage() {
           {/* Skill Bars */}
           <div className="">
             <a
-              href="/frontend/src/assets/Resume/Kurt Resume.pdf"
+              href="/Portfolio/Resume/Kurt_Resume.pdf"
               download="My_Resume.pdf"
               className="flex items-center gap-2 px-5 py-2 text-white border border-blue-400 rounded-lg shadow-lg 
              bg-gradient-to-r from-blue-600 to-cyan-500 

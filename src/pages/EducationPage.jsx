@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 
 // imported certificates
 import SAP from "../assets/Certificates/SAP Certificate.jpeg";
 import ReactJS from "../assets/Certificates/simple learn certificate.png";
-import JavaCert from "../assets/Certificates/Java Certificate (June 25, 2022).png" 
+import JavaCert from "../assets/Certificates/Java Certificate (June 25, 2022).png";
 import Symposium from "../assets/Certificates/Symposium Presenter Certificate.jpeg";
-import LaminaCert from  "../assets/Certificates/Certificate of Completion (Lamina Studios).png";
+import LaminaCert from "../assets/Certificates/Certificate of Completion (Lamina Studios).png";
 
 export default function EducationPage() {
   const [selectedCert, setSelectedCert] = useState(null);
@@ -46,12 +48,12 @@ export default function EducationPage() {
           <div className="flex flex-col mb-6 md:flex-row md:items-start md:justify-between">
             <div>
               <h3 className="mb-2 text-2xl font-semibold">
-                STI College San Jose Del Monte
+              <FontAwesomeIcon icon={faGraduationCap} />  STI College San Jose Del Monte
               </h3>
               <p className="text-lg text-gray-300">
                 Bachelor of Science in Information Technology
               </p>
-              <p className="text-lg text-gray-300">GWA: 1.42 || Cum Laude</p>
+              <p className="text-lg text-gray-300">Cumulative GPA: 1.42 | Cum Laude</p>
             </div>
             <p className="mt-2 text-sm text-gray-400 md:mt-0">
               Aug 2021 – Jul 11, 2025
