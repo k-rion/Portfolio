@@ -20,6 +20,9 @@ export default function Navbar() {
           <a className="navbar-texts" href="#education">
             Education
           </a>
+          <a className="navbar-texts" href="#skills">
+            Skills
+          </a>
           <a className="navbar-texts" href="#projects">
             Projects
           </a>
@@ -39,7 +42,7 @@ export default function Navbar() {
 
           {/* sun icon */}
           <svg
-            className="swap-off h-10 w-10 fill-current"
+            className="w-10 h-10 fill-current swap-off"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -48,7 +51,7 @@ export default function Navbar() {
 
           {/* moon icon */}
           <svg
-            className="swap-on h-10 w-10 fill-current"
+            className="w-10 h-10 fill-current swap-on"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >

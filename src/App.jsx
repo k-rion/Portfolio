@@ -5,6 +5,7 @@ import AboutPage from "./pages/AboutPage";
 import ProjectPage from "./pages/ProjectPage";
 import Skills from "./pages/Skills";
 import EducationPage from "./pages/EducationPage";
+import ContactPage from "./pages/ContactPage";
 import FooterComponent from "./components/FooterComponent";
 
 function App() {
@@ -37,6 +38,11 @@ function App() {
 
       <section id="projects">
         <ProjectPage />
+      </section>
+
+      {/* Contact */}
+      <section id="contact">
+        <ContactPage/>
       </section>
 
       <FooterComponent />
