@@ -1,6 +1,10 @@
 import React from "react";
 import AboutMePic from "../assets/My Photo/MyPic.jpeg";
 
+// Import FontAwesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen py-16 mx-auto max-w-7xl">
@@ -37,42 +41,18 @@ export default function AboutPage() {
           </p>
 
           {/* Skill Bars */}
-          <div className="space-y-4">
-            <div>
-              <div className="flex justify-between mb-1 text-sm font-medium">
-                <span>Web Development</span>
-                <span>90%</span>
-              </div>
-              <progress
-                className="w-full h-2 progress progress-primary"
-                value="90"
-                max="100"
-              ></progress>
-            </div>
-
-            <div>
-              <div className="flex justify-between mb-1 text-sm font-medium">
-                <span>UI/UX Design</span>
-                <span>85%</span>
-              </div>
-              <progress
-                className="w-full h-2 progress progress-primary"
-                value="85"
-                max="100"
-              ></progress>
-            </div>
-
-            <div>
-              <div className="flex justify-between mb-1 text-sm font-medium">
-                <span>Database Management</span>
-                <span>88%</span>
-              </div>
-              <progress
-                className="w-full h-2 progress progress-primary"
-                value="88"
-                max="100"
-              ></progress>
-            </div>
+          <div className="">
+            <a
+              href="/frontend/src/assets/Resume/Kurt Resume.pdf"
+              download="My_Resume.pdf"
+              className="flex items-center gap-2 px-5 py-2 text-white border border-blue-400 rounded-lg shadow-lg 
+             bg-gradient-to-r from-blue-600 to-cyan-500 
+             hover:from-blue-500 hover:to-cyan-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] 
+             transition-all duration-300 w-52 text-center"
+            >
+              <FontAwesomeIcon icon={faDownload} />
+              Download Resume
+            </a>
           </div>
         </div>
       </div>

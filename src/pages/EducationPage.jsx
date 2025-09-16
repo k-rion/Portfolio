@@ -1,32 +1,35 @@
 import React, { useState } from "react";
 
+// imported certificates
+import SAP from "../assets/Certificates/SAP Certificate.jpeg";
+import ReactJS from "../assets/Certificates/simple learn certificate.png";
+import JavaCert from "../assets/Certificates/Java Certificate (June 25, 2022).png" 
+import Symposium from "../assets/Certificates/Symposium Presenter Certificate.jpeg";
+import LaminaCert from  "../assets/Certificates/Certificate of Completion (Lamina Studios).png";
+
 export default function EducationPage() {
   const [selectedCert, setSelectedCert] = useState(null);
 
   const certificates = [
     {
       title: "Java Certificate (June 25, 2022)",
-      img: "/certificates/java-cert.jpg", // replace with your actual path
+      img: JavaCert,
     },
     {
       title: "ReactJS Certificate (Simple Learn)",
-      img: "/certificates/react-cert.jpg",
+      img: ReactJS,
     },
     {
       title: "SAP Certificate",
-      img: "/certificates/sap-cert.jpg",
+      img: SAP,
     },
     {
       title: "Symposium Presenter Certificate",
-      img: "/certificates/symposium-cert.jpg",
+      img: Symposium,
     },
     {
       title: "Certificate of Completion (Lamina Studios)",
-      img: "/certificates/lamina-cert.jpg",
-    },
-    {
-      title: "Simple Learn Certificate",
-      img: "/certificates/simplelearn-cert.jpg",
+      img: LaminaCert,
     },
   ];
 

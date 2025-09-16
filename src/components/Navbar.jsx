@@ -29,8 +29,11 @@ export default function Navbar() {
         </div>
 
         {/* Toggle Dark and Light Mode */}
-        <label className="cursor-pointer">
-          <input type="checkbox" className="toggle" defaultChecked />
+        <label className="flex items-center gap-3 cursor-pointer">
+          <input
+            type="checkbox"
+            className="toggle theme-controller"
+          />
         </label>
       </div>
     </div>
