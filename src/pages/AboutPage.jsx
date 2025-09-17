@@ -7,16 +7,16 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen py-16 mx-auto max-w-7xl">
+    <div className="items-center min-h-screen px-4 py-16 mx-auto mt-20 max-w-7xl">
       {/* Title */}
-      <h2 className="title-text">
+      <h2 className="mb-8 text-center title-text md:text-left">
         About <span className="text-primary">Me</span>
       </h2>
 
-      <div className="flex flex-col items-center justify-between gap-6 text-white md:flex-row">
+      <div className="flex flex-col items-center justify-between gap-10 text-white md:flex-row">
         {/* Left Image */}
-        <div className="flex justify-start md:w-1/2">
-          <div className="max-w-sm overflow-hidden shadow-xl rounded-2xl">
+        <div className="flex justify-center md:justify-start md:w-1/2">
+          <div className="w-full max-w-xs overflow-hidden shadow-xl sm:max-w-sm md:max-w-md rounded-2xl">
             <img
               src={AboutMePic}
               alt="About Me"
@@ -26,7 +26,7 @@ export default function AboutPage() {
         </div>
 
         {/* Right Content */}
-        <div className="space-y-6 text-end md:w-1/2 md:text-left">
+        <div className="space-y-6 text-center md:text-left md:w-1/2">
           {/* Description */}
           <p>
             Hello! I'm <span className="font-bold">Kurt Rion</span>, a
@@ -40,8 +40,8 @@ export default function AboutPage() {
             designing systems that are both scalable and maintainable.
           </p>
 
-          {/* Skill Bars */}
-          <div className="">
+          {/* Download Resume */}
+          <div className="flex justify-center md:justify-start">
             <a
               href="/Portfolio/Resume/Kurt_Resume.pdf"
               download="My_Resume.pdf"

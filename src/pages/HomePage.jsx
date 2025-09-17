@@ -4,30 +4,31 @@ import React from "react";
 import MyPhoto from "../../src/assets/My Photo/1000115656.jpg";
 
 export default function HomePage() {
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen mx-auto text-center max-w-7xl ">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-20 mx-auto text-center max-w-7xl">
       {/* Avatar */}
-      <div className="mb-4 avatar">
-        <div className="w-40 h-40 rounded-full ring ring-offset-base-100 ring-offset-2 animate-[bounce_4s_infinite] overflow-hidden">
-          <img src={MyPhoto} alt="Profile" />
+      <div className="mb-6 avatar">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full 
+                        ring ring-offset-base-100 ring-offset-2 
+                        animate-[bounce_4s_infinite] overflow-hidden">
+          <img src={MyPhoto} alt="Profile" className="object-cover w-full h-full" />
         </div>
       </div>
 
       {/* Name */}
-      <h1 className="mb-4 text-6xl font-bold">Kurt Rion</h1>
+      <h1 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">
+        Kurt Rion
+      </h1>
 
       {/* Description */}
-      <p className="max-w-xl mb-4 text-lg">
+      <p className="max-w-md mb-6 text-sm text-gray-300 sm:max-w-lg md:max-w-xl lg:max-w-2xl sm:text-base md:text-lg">
         Recent Information Technology graduate passionate about creating
         innovative solutions and building the future of technology.
       </p>
 
       {/* Buttons */}
-      <div className="flex gap-4">
-        <button className="viewProj-btn " id="#projects">
-          View Project
-        </button>
+      <div className="flex flex-col gap-4 sm:flex-row">
+        <button className="viewProj-btn">View Project</button>
         <button className="contact-btn">Contact Me</button>
       </div>
     </div>
