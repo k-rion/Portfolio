@@ -98,7 +98,7 @@ export default function ContactPage() {
           ))}
 
           {/* Socials */}
-          <div className="flex justify-center gap-6 mt-6 md:justify-start">
+          <div className="flex justify-center gap-4 sm:gap-5 md:gap-6 mt-4 sm:mt-5 md:mt-6 md:justify-start">
             {socials.map((s, indx) => (
               <a
                 href={s.link}
@@ -108,10 +108,15 @@ export default function ContactPage() {
               >
                 <FontAwesomeIcon
                   icon={s.icon}
-                  className="p-3 text-white border border-blue-400 rounded-full shadow-lg
-                    bg-gradient-to-r from-blue-600 to-cyan-500 
-                    hover:from-blue-500 hover:to-cyan-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] 
-                    transition-all duration-150 w-10 h-10 hover:scale-125 ease-in-out"
+                  className="
+          p-2 sm:p-2.5 md:p-3 
+          text-white border border-blue-400 rounded-full shadow-lg
+          bg-gradient-to-r from-blue-600 to-cyan-500 
+          hover:from-blue-500 hover:to-cyan-400 hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] 
+          transition-all duration-150 
+          w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 
+          hover:scale-125 ease-in-out
+        "
                 />
               </a>
             ))}

@@ -42,6 +42,7 @@ export default {
       colors: {
         primary: "#00bcd4", // Choose your primary color
       },
+      scrollBehavior: ['smooth'],
     },
   },
   plugins: [daisyui],

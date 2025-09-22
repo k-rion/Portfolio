@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 // Import image
 import MyPhoto from "../../src/assets/My Photo/1000115656.jpg";
@@ -8,10 +9,16 @@ export default function HomePage() {
     <div className="flex flex-col items-center justify-center min-h-screen px-4 py-20 mx-auto text-center max-w-7xl">
       {/* Avatar */}
       <div className="mb-6 avatar">
-        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full 
+        <div
+          className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full 
                         ring ring-offset-base-100 ring-offset-2 
-                        animate-[bounce_4s_infinite] overflow-hidden">
-          <img src={MyPhoto} alt="Profile" className="object-cover w-full h-full" />
+                        animate-[bounce_4s_infinite] overflow-hidden"
+        >
+          <img
+            src={MyPhoto}
+            alt="Profile"
+            className="object-cover w-full h-full"
+          />
         </div>
       </div>
 
@@ -27,9 +34,25 @@ export default function HomePage() {
       </p>
 
       {/* Buttons */}
-      <div className="flex flex-col gap-4 sm:flex-row">
-        <button className="viewProj-btn">View Project</button>
-        <button className="contact-btn">Contact Me</button>
+      <div className="flex flex-col gap-10 sm:flex-row">
+        <Link
+          to="projects"
+          smooth={true}
+          duration={500}
+          offset={-80} // 👈 offset so content isn’t hidden under navbar
+          className="viewProj-btn cursor-pointer"
+        >
+          View Projects
+        </Link>
+        <Link
+          to="contact"
+          smooth={true}
+          duration={500}
+          offset={-80}
+          className="contact-btn cursor-pointer"
+        >
+          Contact Me
+        </Link>
       </div>
     </div>
   );

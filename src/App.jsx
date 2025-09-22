@@ -16,7 +16,7 @@ function App() {
         <Navbar />
       </section>
 
-      <section id="homepage">
+      <section id="home">
         {/* Homepage */}
         <HomePage />
       </section>

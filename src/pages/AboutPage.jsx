@@ -7,9 +7,9 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 export default function AboutPage() {
   return (
-    <div className="items-center min-h-screen px-4 py-16 mx-auto mt-20 max-w-7xl">
+    <div className="items-center min-h-screen px-4 py-16 mx-auto mt-20 max-w-7xl w-full">
       {/* Title */}
-      <h2 className="mb-8 text-center title-text md:text-left">
+      <h2 className="mb-8 text-center title-text md:text-left title-text">
         About <span className="text-primary">Me</span>
       </h2>
 
