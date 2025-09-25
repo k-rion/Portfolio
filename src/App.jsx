@@ -10,7 +10,7 @@ import FooterComponent from "./components/FooterComponent";
 
 function App() {
   return (
-    <div className="min-h-screen w-full bg-[#0d0d14] text-white">
+    <div className="w-full min-h-screen text-white bg-base-100">
       <section id="navbar">
         {/* Navbar */}
         <Navbar />

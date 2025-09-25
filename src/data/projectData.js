@@ -2,7 +2,7 @@
 import HW from "../assets/Project1_Symposium/Hello_World.png";
 import SAS from "../assets/Project2_StealAndStealth/Screenshot_2025-06-25_073038.png.png";
 import WFP from "../assets/WeatherForecastApp/2.png";
-import TDA from "../assets/Todo_App/Screenshot 2025-09-01 102701.png";
+import TDA from "../assets/Todo_App/Todo.png"
 import CNC from "../assets/ClickNcartProject/clickncart1.png";
 import SMX from "../assets/MovieList/M1.png";
 
@@ -76,7 +76,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Todo App",
+    title: "Taskflow",
     description:
       "A simple To-Do web app that lets users add, update, delete, and mark tasks with an underline when completed",
     image: TDA,

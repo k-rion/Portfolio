@@ -40,13 +40,44 @@ export default {
         fadeRight: "fadeRight 0.8s ease-in-out forwards",
       },
       colors: {
-        primary: "#00bcd4", // Choose your primary color
+        primary: "#00bcd4",
       },
-      scrollBehavior: ['smooth'],
+      scrollBehavior: ["smooth"],
     },
   },
   plugins: [daisyui],
   daisyui: {
-      themes: ["light", "dark"],
+    themes: [
+      {
+        mydark: {
+          primary: "#00bcd4",
+          secondary: "#1c1c28",
+          accent: "#37cdbe",
+          neutral: "#2a2e37",
+          "base-100": "#0d0d14",
+          "base-200": "#13131c",
+          "base-300": "#1a1a24",
+          info: "#3abff8",
+          success: "#36d399",
+          warning: "#fbbd23",
+          error: "#f87272",
+        },
+      },
+      {
+        mylight: {
+          primary: "#00bcd4",
+          secondary: "#e2e2e2",
+          accent: "#37cdbe",
+          neutral: "#f5f5f5",
+          "base-100": "#ffffff",
+          "base-200": "#f9f9f9",
+          "base-300": "#e6e6e6",
+          info: "#3abff8",
+          success: "#36d399",
+          warning: "#fbbd23",
+          error: "#f87272",
+        },
+      },
+    ],
   },
 };

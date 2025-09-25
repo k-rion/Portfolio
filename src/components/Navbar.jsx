@@ -1,23 +1,42 @@
-// Navbar.jsx
-import React, { useState } from "react";
 import { Link } from "react-scroll";
+import React, { useEffect, useState } from "react";
+import { Sun, MoonStar } from "lucide-react";
 import { Dlinks } from "../data/dataLinks";
-import Logo from "../assets/My Photo/K__1_-removebg-preview.png";
+import LogoDark from "../assets/My Photo/K__1_-removebg-preview.png";
+import LogoLight from "../assets/My Photo/K-removebg-preview.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "mylight"
+  );
+
+  function handleToggleTheme() {
+    const newTheme = theme === "mylight" ? "mydark" : "mylight";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  }
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
   return (
-    <nav className="w-full bg-[#0d0d14] text-white shadow-xl fixed left-0 top-0 z-9999">
+    <nav className="fixed top-0 left-0 z-50 w-full shadow-xl bg-base-100 text-base-content">
       <div className="flex items-center justify-between px-4 py-3 mx-auto max-w-7xl">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 cursor-pointer">
-          <img src={Logo} alt="My logo" className="w-12 sm:w-16" />
+          {theme === "mylight" ? (
+            <img src={LogoLight} alt="Light Logo" className="w-12 sm:w-16" />
+          ) : (
+            <img src={LogoDark} alt="Dark Logo" className="w-12 sm:w-16" />
+          )}
           <span className="text-lg font-bold">Kurt</span>
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="items-center hidden gap-10 md:flex">
           <div className="flex gap-6">
             {Dlinks.map((link) => (
               <Link
@@ -28,7 +47,7 @@ export default function Navbar() {
                 offset={-80}
                 spy={true}
                 activeClass="text-blue-400"
-                className="navbar-texts cursor-pointer"
+                className="cursor-pointer navbar-texts"
               >
                 {link.name}
               </Link>
@@ -36,25 +55,9 @@ export default function Navbar() {
           </div>
 
           {/* Dark/Light Toggle */}
-          <label className="swap swap-rotate">
-            <input type="checkbox" className="theme-controller" value="dark" />
-            {/* Sun icon */}
-            <svg
-              className="w-8 h-8 fill-current swap-off"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 18a6 6 0 100-12 6 6 0 000 12z" />
-            </svg>
-            {/* Moon icon */}
-            <svg
-              className="w-8 h-8 fill-current swap-on"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path d="M21.64 13A9 9 0 1111 3.36 7 7 0 0021.64 13z" />
-            </svg>
-          </label>
+          <button type="button" onClick={handleToggleTheme}>
+            {theme ? <Sun size={30} /> : <MoonStar size={30} />}
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -98,7 +101,7 @@ export default function Navbar() {
               offset={-80}
               spy={true}
               activeClass="text-blue-400"
-              className="navbar-texts cursor-pointer"
+              className="cursor-pointer navbar-texts"
               onClick={() => setIsOpen(false)}
             >
               {link.name}

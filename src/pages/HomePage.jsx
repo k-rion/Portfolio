@@ -40,7 +40,7 @@ export default function HomePage() {
           smooth={true}
           duration={500}
           offset={-80} // 👈 offset so content isn’t hidden under navbar
-          className="viewProj-btn cursor-pointer"
+          className="cursor-pointer viewProj-btn"
         >
           View Projects
         </Link>
@@ -49,7 +49,7 @@ export default function HomePage() {
           smooth={true}
           duration={500}
           offset={-80}
-          className="contact-btn cursor-pointer"
+          className="cursor-pointer contact-btn"
         >
           Contact Me
         </Link>
